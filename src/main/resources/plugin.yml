@@ -1,6 +1,6 @@
 name: petTeleport
 version: ${project.version}
-api-version: 1.17.1
+api-version: 1.17
 description: Pets teleport with you!
 authors: [ Raus,NotAShelf ]
-main: com.raus.petTeleport.petTeleport
+main: com.raus.petTeleport.Main
