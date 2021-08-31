@@ -4,3 +4,6 @@ api-version: 1.17
 description: Pets teleport with you!
 authors: [ Raus,NotAShelf ]
 main: com.raus.petTeleport.Main
+permissions:
+  petteleport.admin:
+    description: "Notifies users with this permission of plugin updates."

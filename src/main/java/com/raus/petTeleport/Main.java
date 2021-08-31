@@ -11,14 +11,16 @@ public class Main extends JavaPlugin {
 		// Listeners
 		getServer().getPluginManager().registerEvents(new UnloadListener(), this);
 		UpdateChecker.init(this, SPIGOT_RESOURCE_ID)
-				.checkEveryXHours(24) // Check every 24 hours
-				.checkNow(); // And check right now
-
+				.checkEveryXHours(24)
+				.setNotifyOpsOnJoin(true)
+				.setNotifyByPermissionOnJoin("petteleport.admin")
+				.checkNow();
+		getLogger().info("PetTeleport has been enabled.");
 	}
 
 	@Override
 	public void onDisable()
 	{
-
+		getLogger().info("PetTeleport has been disabled.");
 	}
 }
