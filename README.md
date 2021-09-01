@@ -2,7 +2,7 @@
 # This is a fork of the plugin pet-teleport which I have compiled using the spigot 1.17 API.
 You don't really have a reason to use this fork since the original one is as functional in 1.17.1 (probably newever versions too.)
 
-*This fork includes a different plugin structure, maven, and an update checker to, well, check updates.0
+*This fork includes a different plugin structure, maven, and an update checker to, well, check updates.*
 
 <p align="center">
   <img src="https://i.imgur.com/Bwili3Z.png">
