@@ -28,3 +28,12 @@ jobs:
         title: "PetTeleport ${{ steps.vars.outputs.version }}"
         files: | 
           target/(.jar|!(original-PetTeleport.jar))
+#    - name: Discord Notification
+#      env:
+#        DISCORD_WEBHOOK: ${{ secrets.RELEASE_WEBHOOK }}
+#      uses: Ilshidur/action-discord@master
+#      with:
+#        args: | 
+#          **New release for** `{{ EVENT_PAYLOAD.repository.full_name }}`: **Version:** ${{ steps.vars.outputs.version }} 
+#          ```${{github.event.release.body}}``` 
+#          Direct download: ${{steps.automatic_release.outputs.browser_download_url}}
