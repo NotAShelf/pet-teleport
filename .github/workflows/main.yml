@@ -30,6 +30,6 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         prerelease: false
-        title: "PetTeleport ${{ steps.vars.outputs.version }"
+        title: "PetTeleport ${{ steps.vars.outputs.version }}"
         files: | 
             target/*.jar
