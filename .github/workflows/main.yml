@@ -25,7 +25,7 @@ jobs:
       run: mvn package
     - name: Set variables
       id: vars
-      run: echo ::set-output name=version::${GITHUB_REF#refs/*}
+      run: echo ::set-output name=version::${GITHUB_REF#refs/tags/*}
     - uses: marvinpinto/action-automatic-releases@latest
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
