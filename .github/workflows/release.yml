@@ -28,6 +28,7 @@ jobs:
         title: "PetTeleport ${{ steps.vars.outputs.version }}"
         files: | 
           target/(.jar|!(original-PetTeleport.jar))
+          
 #    - name: Discord Notification
 #      env:
 #        DISCORD_WEBHOOK: ${{ secrets.RELEASE_WEBHOOK }}
