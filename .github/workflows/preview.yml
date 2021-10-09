@@ -46,4 +46,7 @@ jobs:
         DISCORD_WEBHOOK: ${{ secrets.RELEASE_WEBHOOK }}
       uses: Ilshidur/action-discord@master
       with:
-        args: '**New release for {{ EVENT_PAYLOAD.repository.full_name }}: Version ${{ steps.vars.outputs.version }}**```${{github.event.pull_request.body}}```Direct download: ${{steps.automatic_release.outputs.browser_download_url}}'
+        args: | 
+          **New release for** `{{ EVENT_PAYLOAD.repository.full_name }}`: **Version:** ${{ steps.vars.outputs.version }} 
+          ```${{github.event.release.body}}``` 
+          Direct download: ${{steps.automatic_release.outputs.browser_download_url}}
