@@ -24,16 +24,6 @@ jobs:
         restore-keys: |
            ${{ runner.os }}-maven-
 
-    - name: Set pom version to release
-      id: pom
-      run: |
-        mvn -B versions:set -DnewVersion=${{github.event.pull_request.title}}
-        echo "JAR=$(mvn git-commit-id:revision -q -Dexec.executable=echo -Dexec.args="\${project.build.finalName}" --non-recursive exec:exec).jar >> $GITHUB_ENV"
-        echo "VERSION=$(mvn -q -Dexec.executable="echo" -Dexec.args='${project.version}' --non-recursive exec:exec) >> $GITHUB_ENV"
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub"
-        git commit -m "Release ${{github.event.pull_request.title}}" -a
-
     - name: Build with Maven
       run: mvn package
 
