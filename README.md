@@ -5,7 +5,7 @@
 <p align="center">
   <code><img title="License" href="LICENSE" src="https://img.shields.io/github/license/NotAShelf/pet-teleport?style=flat-square"></code>
   <code><img title="Issues" href="https://github.com/NotAShelf/pet-teleport/issues" src="https://img.shields.io/github/issues/NotAShelf/pet-teleport?style=flat-square"></code>
-  <code><img title="Maven Release CI" href="https://github.com/NotAShelf/pet-teleport/actions/workflows/main.yml" src="https://github.com/NotAShelf/pet-teleport/actions/workflows/main.yml/preview.svg"></code>
+  <code><img title="Maven Release CI" href="https://github.com/NotAShelf/pet-teleport/actions/workflows/preview.yml" src="https://github.com/NotAShelf/pet-teleport/actions/workflows/preview.yml/badge.svg"></code>
 </p>
 
 <p align="center">
