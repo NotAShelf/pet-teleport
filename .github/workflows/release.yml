@@ -2,19 +2,13 @@ name: maven-release-ci
 
 on:
   push:
-    tags: [ v* ]
-    branches:
-      - master
+    tags: [ "v*" ]
     paths-ignore:
       - '**.md'
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
@@ -33,4 +27,4 @@ jobs:
         prerelease: false
         title: "PetTeleport ${{ steps.vars.outputs.version }}"
         files: | 
-            target/*.jar
+          target/(.jar|!(original-PetTeleport.jar))
