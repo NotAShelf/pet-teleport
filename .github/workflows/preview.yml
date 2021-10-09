@@ -37,7 +37,7 @@ jobs:
         repo_token: "${{ secrets.GITHUB_TOKEN }}"
         automatic_release_tag: "v${{ steps.vars.outputs.version }}-SNAPSHOT"
         prerelease: true
-        title: "Development Build (${{ steps.vars.outputs.version }})"
+        title: "Development Build (${{ steps.vars.outputs.version }})-SNAPSHOT"
         files: |
           target/(.jar|!(original-PetTeleport.jar))
 
