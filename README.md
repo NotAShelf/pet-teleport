@@ -31,5 +31,5 @@
 
 <h2 align="center">Permissions</h2>
  <p align="center">
-  <code>petteleport.admin</code> - Permission to receive in-game notifications for updates. (Defaults to **OP**)
+  <code>petteleport.admin</code> - Permission to receive in-game notifications for updates. (Defaults to <strong>OP</strong>)
   </p>
