@@ -25,10 +25,11 @@ jobs:
       run: mvn package
     - name: Set variables
       id: vars
-      run: echo ::set-output name=version::${GITHUB_REF#refs/tags/*}
+      run: echo ::set-output name=version::${GITHUB_REF#refs/*}
     - uses: marvinpinto/action-automatic-releases@latest
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
+        automatic_release_tag: "v${{ steps.vars.outputs.version }}"
         prerelease: false
         title: "PetTeleport ${{ steps.vars.outputs.version }}"
         files: | 
