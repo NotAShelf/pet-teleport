@@ -114,3 +114,5 @@ run/
 
 # Visual Studio Code
 .settings/
+.classpath
+.project
