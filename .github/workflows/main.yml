@@ -1,7 +1,8 @@
-name: Java CI with Maven
+name: maven-release-ci
 
 on:
   push:
+    tags: [ v* ]
     branches:
       - master
     paths-ignore:
@@ -22,11 +23,13 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn package
+    - name: Set variables
+      id: vars
+      run: echo ::set-output name=version::${GITHUB_REF#refs/tags/v}
     - uses: marvinpinto/action-automatic-releases@latest
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        automatic_release_tag: "latest"
         prerelease: false
-        title: "Latest Stable Release"
+        title: "PetTeleport ${{ steps.vars.outputs.version }"
         files: | 
-            target/PetTeleport.jar
+            target/*.jar
