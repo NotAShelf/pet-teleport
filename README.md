@@ -19,6 +19,7 @@ your pet in stow! This plugin ensures that all standing pets teleport to you if 
   <a><img src="https://i.imgur.com/nbE7F5i.gif"></a>
   <br/>
 </div>
+<br>
 
 Tame your desired pets and the plugin will automatically work when you teleport. There is practically no manual input from the player required.
 Other than, well, moving around with your pets.
@@ -30,6 +31,25 @@ None!
 ### Permissions
 
 None!
+
+### Configuration
+
+```yaml
+logPetTeleports: true
+
+worldList:
+  - lobby
+  - hub
+  - some_other_world
+
+isBlacklist: true
+```
+
+| Option          | Description                                                                                                           | Type      |
+| --------------- | --------------------------------------------------------------------------------------------------------------------- | --------- |
+| logPetTeleports | Whether to log pet teleports in the server console                                                                    | `boolean` |
+| worldList       | A list of worlds that pets may or may not teleport to                                                                 | `list`    |
+| isBlacklist     | Whether the `worldList` option will act as a blacklist. <br>If false, pets may only teleport to the world in the list | `bool`    |
 
 ## License
 
