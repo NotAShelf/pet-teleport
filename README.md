@@ -17,6 +17,7 @@ your pet in stow! This plugin ensures that all standing pets teleport to you if 
 
 <div align="center">
   <a><img src="https://i.imgur.com/nbE7F5i.gif"></a>
+  <br/>
 </div>
 
 Tame your desired pets and the plugin will automatically work when you teleport. There is practically no manual input from the player required.
