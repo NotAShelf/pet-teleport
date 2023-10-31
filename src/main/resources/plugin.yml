@@ -1,11 +1,7 @@
 name: PetTeleport
 version: ${project.version}
-api-version: 1.17
+api-version: 1.20
 description: Pets teleport with you!
-authors: [ Raus,NotAShelf ]
+authors: [Raus, NotAShelf]
 prefix: PetTeleport
-main: com.raus.petTeleport.Main
-permissions:
-  petteleport.admin:
-    default: op
-    description: "Notifies users with this permission of plugin updates."
+main: net.avallion.petTeleport.Main
