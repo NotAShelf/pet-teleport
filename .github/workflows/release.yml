@@ -1,6 +1,7 @@
-name: maven-release-ci
+name: "Maven Release CI"
 
 on:
+  workflow_dispatch:
   push:
     tags: [ "v*" ]
     paths-ignore:
@@ -8,18 +9,19 @@ on:
 
 jobs:
   build:
+    name: "Build with Maven"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
       uses: actions/checkout@v4
 
     - name: Set up JDK 1.17
-      uses: actions/setup-java@v1
+      uses: actions/setup-java@v2
       with:
         java-version: 1.17
 
     - name: Build with Maven
-      run: mvn package
+      run: mvn package --file pom.xml
 
     - name: Set variables
       id: vars
